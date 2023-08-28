@@ -1,3 +1,6 @@
+#header {
+  display: inline;
+}
 .topnav {
   width: 700px;
   height: 90px;
@@ -9,4 +12,8 @@
   width: 50px;
   border: 50px;
   border-radius: 2em;
+}
+
+nav {
+  float: right;
 }
