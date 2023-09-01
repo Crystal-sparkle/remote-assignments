@@ -1,61 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head>  <!--資訊類-->
     <meta charset="UTF-8" />
     <title>Website Title</title>
     <link rel='stylesheet' href='./Assignment 2-request1.css'></link>
 
   </head>
-  <body>
-  <section class ="toolBar"> <!--工具列表*/-->
-<div id="header">
-    <div class="topnav">   <!--navigator -->
-      <div class="title">sunset cafe shop</div>
-      <img class="logo "src="https://www.fair-well.co.uk/wp-content/uploads/FWWebsite-products-2-1-8.jpg" alt="coffe-bean">
-      <nav>
-        <ul>
-          <li>
-            <a class="active" href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#menu">News</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-          <li>
-            <a href="#about">About</a>
-          </li>
-        </ul>
-      </nav>
+  <body>    <!--顯示內容-->       
+    <header main-header>    
+    <div id="header">
+        <div class="topnav">   <!--navigator -->
+          <nav class="toolbar">
+            <ul class="flex-nav">
+              <li><a class="logo" >Website Title / Logo</a></li>
+              <li><a class="item item-0"><label for="burger">☰</label></a></li>  <!--漢堡選單-->
+              <div class="items">
+              <li><a class="item item-1">item 1  </a></li>
+              <li><a class="item item-2">item 2  </a></li>
+              <li><a class="item item-3">item 3  </a></li>
+              <li><a class="item item-4">item 4</a></li>
+              </div>
+            </ul>
+          </nav>
+        
+        </div>
     </div>
-  </div>
-  
-<title>Cafe Menu</title>
-</section>
-<section> <!--中間的框框-->
+</header>  
+
   <h1>Welcome messege</h1>
 
-</section>  
-  
-
-
-  
-    <section> // section Title
+    <section> 
       <div class="Menu">
-        <h2>Section Title</h2>
+        <h3>Section Title</h3>
        </div>
      <div class="contentbox">
-     
-     <div class="box1">Cafe</div>     <!--四個框框的照片-->
-     <div class="box2">SandWish</div>
-     <div class="box3">Tea</div> 
-     <div class="box4">Desert</div>
-     
+       <div class="box1 box-1">Content Box1</div>     
+       <div class="box1 box-2">Content Box2</div>
+       <div class="box1 box-3">Content Box3</div> 
+       <div class="box1 box-4">Content Box4</div>
      </div>
      
-     <div class="calltoAction">Call to Action</div>
+     
     </section>
-
   </body>
+  <footer class="main-footer">
+     <div class="calltoAction"> Call to Action </div>
+   
+  </footer>
 </html>
