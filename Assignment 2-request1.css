@@ -31,9 +31,7 @@ nav a:hover {
   color: white;
 }
 
-/* ================================= 
- Flex box
-==================================== */
+
 
 .flex-nav {
   display: flex;
@@ -58,7 +56,10 @@ nav a:hover {
   margin: 0px;
   flex-direction: column;
   justify-content: center;
-  border: 0;
+  padding-left: 5%;
+	padding-right: 5%;
+  
+  
 }
 
 .box1 {
@@ -81,9 +82,7 @@ nav a:hover {
   height: 25px;
 }
 
-.main-header {
-  padding: 1em 0; /*改善垂直邊界折疊Vertical Margins Collapse */
-}
+
 
 /* ================================= 
   Media Queries
