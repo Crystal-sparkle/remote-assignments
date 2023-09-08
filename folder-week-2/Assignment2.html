@@ -4,9 +4,16 @@
     <!--資訊類-->
     <meta charset="UTF-8" />
     <title>Website Title</title>
-    <link rel="stylesheet" href="./Assignment 2-request1.css" />
+    <link rel="stylesheet" href="./Assignment2.css" />
+    <style>
+  #contentbox2 { 
+      display: none;
+    } 
+
+    </style>
   </head>
   <body>
+    
     <!--顯示內容-->
     <header class="main-header">
       <div id="header">
@@ -14,11 +21,16 @@
           <!--navigator -->
           <nav class="toolbar">
             <ul class="flex-nav">
-              <li><a class="logo">Website Title / Logo</a></li>
               <li>
-                <a class="item item-0"><label for="burger">☰</label></a>
+                <li><a class="logo">Website Title / Logo</a></li>
+              <!--<a class="item item-0"><label for="burger">☰</label></a>*/-->
+              <div class="hamburgerbtn">  
+              <button class="hamburger">   <!--漢堡選單-->
+                  <div class="bar"></div>
+              </div>
+                </button>
               </li>
-              <!--漢堡選單-->
+
               <div class="items">
                 <li><a class="item item-1">item 1</a></li>
                 <li><a class="item item-2">item 2</a></li>
@@ -29,20 +41,37 @@
           </nav>
         </div>
       </div>
+      <nav id="mobile-nav" class="mobile-nav">
+        <a href="#">item1</a>
+        <a href="#">item2</a>
+        <a href="#">item3</a>
+        <a href="#">item4</a>
+      </nav>
     </header>
     <section>
-      <h1>Welcome messege</h1>
+      <h1 id="h1Message">Welcome message</h1>
+
       <h3>Section Title</h3>
+
       <div class="contentbox">
-        <div class="box1 box-1">Content Box1</div>
-        <div class="box1 box-2">Content Box2</div>
-        <div class="box1 box-3">Content Box3</div>
-        <div class="box1 box-4">Content Box4</div>
+        <div class="box box-1">Content Box1</div>
+        <div class="box box-2">Content Box2</div>
+        <div class="box box-3">Content Box3</div>
+        <div class="box box-4">Content Box4</div>
       </div>
     </section>
+    <div class="firstBtn">
+      <button id="calltoAction">Call to Action</button>
+    </div>
+    <div id="contentbox2" class="contentbox">
+      <div class="box box2 box-1">Content Box5</div>
+      <div class="box box2 box-2">Content Box6</div>
+      <div class="box box2 box-3">Content Box7</div>
+      <div class="box box2 box-4">Content Box8</div>
+    </div>
+
+    <script src="./Assignment2.js"></script>
   </body>
 
-  <footer class="main-footer">
-    <div class="calltoAction">Call to Action</div>
-  </footer>
+  <footer class="main-footer"></footer>
 </html>

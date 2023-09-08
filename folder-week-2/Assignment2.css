@@ -35,6 +35,7 @@ nav a:hover {
 }
 .logo {
   align-self: flex-start;
+  width: 10%;
 }
 .item-0 {
   align-self: flex-end;
@@ -57,7 +58,7 @@ nav a:hover {
   margin: 0 auto;
 }
 
-.box1 {
+.box {
   text-align: center;
   background-color: grey;
   height: 100px;
@@ -65,17 +66,90 @@ nav a:hover {
   margin: 10px;
 }
 
+/* 做hamburger*/
+.hamburger {
+  position: fixed;
+  display: block;
+  width: 35px;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  right: 0;
+  z-index: 100;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px; /*槓的寬度*/
+  background-color: black;
+  margin: 6px 0px;
+  transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+  transform: rotate(-45deg) translate(-6px, 8px);
+  right: 0;
+}
+.hamburger.hamburger.is-active:after {
+  transform: rotate(45deg) translate(-3px, -5px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
 .main-footer {
   display: flex;
   justify-content: center;
 }
-
-.calltoAction {
+.firstBtn {
+  display: flex;
+  justify-content: center;
+}
+#calltoAction {
   text-align: center;
   background-color: rgb(206, 221, 237);
-  align-items: center;
-  width: 140px;
-  height: 25px;
+  margin: 0 auto;
+  border: 2px rgb(206, 221, 237) dashed;
+  height: 35px;
+}
+.mobile-nav {
+  position: fixed;
+  right: 100%;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  display: block;
+  z-index: 1;
+  float: right;
+  background-color: whitesmoke;
+  padding-top: 20px;
+}
+
+.mobile-nav a {
+  display: inline-block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 16px;
+  text-align: left;
+  padding: 12px 16px;
+  color: black;
+  text-decoration: none;
+}
+
+.mobile-nav.is-active {
+  right: 0;
+}
+
+.mobile-nav a:hover {
+  background-color: pink;
+  width: 100%;
 }
 
 /* ================================= 
@@ -89,7 +163,7 @@ nav a:hover {
   .contentbox {
     flex-direction: column;
   }
-  .box1 {
+  .box {
     max-width: 300px;
     width: 90%;
   }
@@ -102,31 +176,31 @@ nav a:hover {
   .contentbox {
     flex-wrap: wrap;
   }
-  .box1 {
+  .box {
     width: 45%;
   }
 }
 
 @media (min-width: 800px) and (max-width: 1200px) {
-  label {
+  .hamburgerbtn {
     display: none;
   }
   .contentbox {
     flex-wrap: wrap;
   }
-  .box1 {
+  .box {
     width: 45%;
   }
 }
 
 @media (min-width: 1200px) {
-  label {
+  .hamburgerbtn {
     display: none;
   }
   .contentbox {
     flex-wrap: wrap;
   }
-  .box1 {
+  .box {
     width: 45%;
   }
 }
