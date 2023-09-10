@@ -28,6 +28,7 @@ else if(arr1[5]>=arr1[i]) {
 }*/
 function max(numbers) {
   const arr1 = [...numbers];
+  let NumMax = arr1[0];
   for (i = 0; i < arr1.length; i++) {
     let NumMax = arr1[0];
     if (arr1[i] > NumMax) {
@@ -71,7 +72,7 @@ function calculate(data) {
   console.log(totalPrice);
 }
 const discountedPrice = calculate({
-  discount: 0.1,
+  discount: 0.9,
   products: [
     {
       name: "Product 1",
@@ -89,21 +90,3 @@ const discountedPrice = calculate({
 });
 
 // show the total price of all products after applying a discount
-
-第一週作業延伸;
-//Assignment 4: HTML DOM and Event Handling
-//Following assignment in week 1, let’s add some effects on it by only pure JavaScript
-//without Bootstrap, jQuery or any other libraries.
-//Request 1: Click to Change Text.
-//When the user clicks on the "Welcome Message" block, change text to "Have a Good Time!".
-
-//Request 2: Click to Show/Close Menu.
-//When the user clicks the menu at the top-right corner, show the hidden mobile menu.
-//After that, the user can click the close button to hide it.
-//Hint: you may apply css position:fixed to create a floating mobile menu,
-//which may be out of screen at the beginning and totally separated from the original menu.
-
-//Request 3: Click to Show More Content Boxes.
-//There are some more content boxes waiting to show. When the user clicks the Call-to-Action button,
-//show those hidden content boxes.
-//Hint: all content boxes are already there, they are just set to display:none at the beginning.
