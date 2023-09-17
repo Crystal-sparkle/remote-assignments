@@ -30,12 +30,11 @@ function max(numbers) {
   const arr1 = [...numbers];
   let NumMax = arr1[0];
   for (i = 0; i < arr1.length; i++) {
-    let NumMax = arr1[0];
     if (arr1[i] > NumMax) {
       NumMax = arr1[i];
     }
   }
-  console.log(NumMax);
+  return NumMax;
 }
 console.log(max([1, 2, 4, 5])); // expected output: 5
 console.log(max([5, 2, 7, 1, 6])); // expected output: 7
@@ -67,12 +66,12 @@ function calculate(data) {
   // 取出object 的price值,在把他們乘以優惠 就會得到答案
   const { discount, products } = data; // 使用 reduce 函數將價格相加
   const total = products.reduce((acc, product) => acc + product.price, 0);
-  const totalPrice = discount * total;
+  const totalPrice = (1 - discount) * total;
 
   console.log(totalPrice);
 }
 const discountedPrice = calculate({
-  discount: 0.9,
+  discount: 0.1,
   products: [
     {
       name: "Product 1",
