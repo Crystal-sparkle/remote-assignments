@@ -18,7 +18,7 @@ function ajax(url) {
 }
 function render(data) {
   data.forEach((product) => {
-    const newuctDiv = document.createElement("div");
+    const newDiv = document.createElement("div");
     newDiv.textContent = `Product: ${product.name}, Price: ${product.price}, Description: ${product.description}`;
     document.body.appendChild(newDiv);
   });
