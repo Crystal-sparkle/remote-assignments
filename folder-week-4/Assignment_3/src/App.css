@@ -1,38 +1,206 @@
-.App {
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(206, 221, 237);
+  height: 200px;
+  width: auto;
+}
+h3 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav > ul {
+  background-color: rgb(230, 230, 230);
+  list-style: none; /* 移除項目符號 */
+  margin: 0px;
+  padding: 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* 滑鼠移到 `<a>` 時變成深底淺色 */
+nav a:hover {
+  background-color: rgb(115, 115, 115);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.flex-nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo {
+  align-self: flex-start;
+  width: 10%;
+}
+.item-0 {
+  align-self: flex-end;
+}
+.items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex: 0.5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.contentbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.box {
+  text-align: center;
+  background-color: grey;
+  height: 100px;
+  width: 300px;
+  margin: 10px;
+}
+
+/* 做hamburger*/
+.hamburger {
+  position: fixed;
+  display: block;
+  width: 35px;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  right: 0;
+  z-index: 100;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px; /*槓的寬度*/
+  background-color: black;
+  margin: 6px 0px;
+  transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+  transform: rotate(-45deg) translate(-6px, 8px);
+  right: 0;
+}
+.hamburger.hamburger.is-active:after {
+  transform: rotate(45deg) translate(-3px, -5px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+.main-footer {
+  display: flex;
+  justify-content: center;
+}
+.firstBtn {
+  display: flex;
+  justify-content: center;
+}
+#calltoAction {
+  text-align: center;
+  background-color: rgb(206, 221, 237);
+  margin: 0 auto;
+  border: 2px rgb(206, 221, 237) dashed;
+  height: 35px;
+}
+.mobile-nav {
+  position: fixed;
+  right: 100%;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  display: block;
+  z-index: 1;
+  float: right;
+  background-color: whitesmoke;
+  padding-top: 20px;
+}
+
+.mobile-nav a {
+  display: inline-block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 16px;
+  text-align: left;
+  padding: 12px 16px;
+  color: black;
+  text-decoration: none;
+}
+
+.mobile-nav.is-active {
+  right: 0;
+}
+
+.mobile-nav a:hover {
+  background-color: pink;
+  width: 100%;
+}
+
+/* ================================= 
+  Media Queries  再考慮一下排序方式
+==================================== */
+
+@media (max-width: 500px) {
+  .items {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .contentbox {
+    flex-direction: column;
+  }
+  .box {
+    max-width: 300px;
+    width: 90%;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 800px) {
+  .items {
+    display: none;
+  }
+  .contentbox {
+    flex-wrap: wrap;
+  }
+  .box {
+    width: 45%;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+  .hamburgerbtn {
+    display: none;
+  }
+  .contentbox {
+    flex-wrap: wrap;
+  }
+  .box {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hamburgerbtn {
+    display: none;
+  }
+  .contentbox {
+    flex-wrap: wrap;
+  }
+  .box {
+    width: 45%;
   }
 }
