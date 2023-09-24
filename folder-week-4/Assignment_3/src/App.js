@@ -1,6 +1,13 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [titleText, setTitleText] = useState("Welcome message");
+
+  const clickTitle = () => {
+    setTitleText("Have a Good Time!");
+  };
+
   return (
     <div className="App">
       <header className="main-header">
@@ -43,7 +50,9 @@ function App() {
         </nav>
       </header>
       <section>
-        <h1 id="h1Message">Welcome message</h1>
+        <h1 id="h1Message" onClick={clickTitle}>
+          {titleText}
+        </h1>
 
         <h3>Section Title</h3>
 
