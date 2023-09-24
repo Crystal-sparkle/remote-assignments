@@ -3,9 +3,18 @@ import "./App.css";
 
 function App() {
   const [titleText, setTitleText] = useState("Welcome message");
+  const [open, setOpen] = useState(false);
 
   const clickTitle = () => {
     setTitleText("Have a Good Time!");
+  };
+
+  const toggleNav = () => {
+    if (open === true) {
+      setOpen(false);
+    } else {
+      setOpen(true);
+    }
   };
 
   return (
@@ -20,7 +29,12 @@ function App() {
                     <a className="logo">Website Title / Logo</a>
                   </li>
                   <div className="hamburgerbtn">
-                    <button className="hamburger"></button>
+                    <button
+                      className={open ? "hamburger is-active" : "hamburger"}
+                      onClick={toggleNav}
+                    >
+                      <div class="bar"></div>
+                    </button>
                   </div>
                 </li>
 
@@ -42,7 +56,10 @@ function App() {
             </nav>
           </div>
         </div>
-        <nav id="mobile-nav" className="mobile-nav">
+        <nav
+          id="mobile-nav"
+          className={open ? "mobile-nav is-active" : "mobile-nav"}
+        >
           <a href="#">item1</a>
           <a href="#">item2</a>
           <a href="#">item3</a>
