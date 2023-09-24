@@ -4,6 +4,7 @@ import "./App.css";
 function App() {
   const [titleText, setTitleText] = useState("Welcome message");
   const [open, setOpen] = useState(false);
+  const [moreContent, setMoreContent] = useState(false);
 
   const clickTitle = () => {
     setTitleText("Have a Good Time!");
@@ -15,6 +16,10 @@ function App() {
     } else {
       setOpen(true);
     }
+  };
+
+  const showMoreContent = () => {
+    setMoreContent(true);
   };
 
   return (
@@ -81,9 +86,15 @@ function App() {
         </div>
       </section>
       <div className="firstBtn">
-        <button id="calltoAction">Call to Action</button>
+        <button id="calltoAction" onClick={showMoreContent}>
+          Call to Action
+        </button>
       </div>
-      <div id="contentbox2" className="contentbox">
+      <div
+        id="contentbox2"
+        className="contentbox"
+        style={{ display: moreContent === true ? "flex" : "none" }}
+      >
         <div className="box box2 box-1">Content Box5</div>
         <div className="box box2 box-2">Content Box6</div>
         <div className="box box2 box-3">Content Box7</div>
